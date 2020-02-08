@@ -1,0 +1,170 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+
+
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+
+
+\begin{document}
+
+\section*{Student Information } 
+%Write your full name and id number between the colon and newline
+%Put one empty space character after colon and before newline
+Full Name : Utku Gungor \\
+Id Number : 2237477 \\
+
+% Write your answers below the section tags
+\section*{Answer 1}
+
+\subsection*{1.1}
+\hspace{15px} We have \textit{$a_n-$} \textit{$a_{n-1}$} = \textit{$n^2$} , let's say \textit{f(n)} = \textit{$n^2$} . \par
+We can use a formula for these types of situations : \\ \par  
+\textit{$a_n$} = \textit{$a_0$} + $\sum_{i=0}^{n}$ \textit{f(i)} where  \textit{f(n)} = \textit{$n^2$} .\\ \par 
+To find \textit{$a_0$} , we can use \textit{$a_1$} = 0 . For n = 1 ,we get \textit{$a_1$} = \textit{$a_0$} + 1 = 1 $\rightarrow$ \textit{$a_0$} = 0 . Then we obtain ; \par 
+\textit{$a_n$} = $\sum_{i=0}^{n}$ \textit{$i^2$} = $\frac{n(n+1)(2n+1)}{6}$ $\rightarrow$ \textit{$a_n$} = $\frac{\textit{$2n^3$}+\textit{$3n^2$}+n}{6}$ .
+
+\subsection*{1.2}
+\hspace{15px} This is a linear nonhomogeneous recurrence relation. We should first solve the homogeneous part which is \textit{$a_n$} = \textit{$2a_{n-1}$} . \par 
+By using the formula \textit{$r^{2}$} + \textit{$c_1r - c_2$} = 0 where our \textit{$c_1$} = 2 and we have no \textit{$c_2$} . So we have \textit{$r^{2} - 2r$} = 0 which has two roots (0 and 2) . 0 does not affect the equation , hence \textit{$a_n^h$} = $\alpha$.\textit{$2^{n}$} . \par 
+For the nonhomogeneous part we could say \textit{$a_n^p$} = C.\textit{$2^{n}$} but in the homogeneous part we have same root (\textit{$2^{n}$}) . So , let's say \textit{$a_n^p$} = C.\textit{$2^{n}$}.n and then we have the equation : \par 
+C.\textit{$2^{n}$}.n = 2.C.\textit{$2^{n-1}$}.(n-1) + \textit{$2^n$} \par 
+C.\textit{$2^{n}$}.n = \textit{$2^n$}.C.(n-1) + \textit{$2^n$} \par 
+C.\textit{$2^{n}$}.n = \textit{$2^n$}.(Cn - C + 1) \par 
+Cn = Cn - C + 1 $\rightarrow$ C = 1 . So , \textit{$a_n^p$} = \textit{$2^n$}.n is a particular solution . By Theorem 5 from the textbook, all solutions are of the form ; \par 
+\textit{$a_n$} = $\alpha$.\textit{$2^n$} + \textit{$2^n$}.n = \textit{$2^n$}($\alpha$ + n) . \par 
+Now we can find $\alpha$ by using \textit{$a_0$} = 1 . For n=0 , we have $\alpha$.1 + 1.0 = 1  $\rightarrow$ $\alpha$ = 1 . \par 
+The solution is \textit{$a_n$} = \textit{$2^n$}(n + 1) .
+
+
+\section*{Answer 2}
+
+\hspace{15px} Let $\textit{P(n)}$ be the proposition that shows $\textit{f(n)}$ $\leq$ $\textit{g(n)}$ . \\ \par 
+\textbf{Basis Step} : $\textit{P(1)}$ is true since 21 $\leq$ 21 . \par 
+\textbf{Inductive Step} : Assume \textit{P(k)} holds for an arbitrary positive integer \textit{k} . We must show that \textit{P(k+1)} holds . \par 
+If \textit{P(k)} holds , we have \textit{$k^{2}$} + \textit{15k} + \textit{5} $\leq$ \textit{$21k^{2}$} \par 
+\textit{f(k+1)} = \textit{$k^{2}$} + \textit{17k} + \textit{21} = \textit{f(k)} + \textit{2k + 16} then ,we can write this equation for \textit{P(k+1)}; \par 
+\textit{f(k+1)} = \textit{f(k)} + \textit{2k + 16} $\leq$ \textit{21$k^{2}$} + \textit{2k + 16} $<$ \textit{21$k^{2}$} + \textit{42k + 21} = \textit{21$(k+1)^{2}$} = \textit{g(k+1)}\\ \par 
+We have showed that \textit{P(k+1)} holds . Therefore , \textit{f(n)} $\leq$ \textit{g(n)} for all positive integers \textit{n} .
+\section*{Answer 3}
+\subsection*{3.2} 
+\subsubsection*{3.2.a} 
+\hspace{15px} Let's use h(T) for height of the tree . We can recursively define this height as :\par 
+\textbf{Basis Step :} The height of an arbitrary binary tree with single vertex is h(T) = \textit{$0$} and the height of an empty tree is h(T) = \textit{$-1$} . \par 
+\textbf{Recursive Step :} We can think \textit{$T_1$} and \textit{$T_2$} as left and right arbitrary trees such that T = \textit{$T_1$} . \textit{$T_2$} . Then our arbitrary binary tree has height h(T) = 1 + max(h(\textit{$T_1$}),h(\textit{$T_2$})) where h(\textit{$T_1$}) and h(\textit{$T_2$}) are heights of those arbitrary trees .
+\subsubsection*{3.2.b}
+\hspace{15px} Let's use f(223-tree) as max. number of vertices , g(223-tree) as min. number of vertices and h(T) as height of the tree .\\ \par 
+For f(223-tree) : \par 
+\textbf{Basis Step :} The max. number of vertices of the 223-tree which has only a root is \par  f(223-tree) = 1 .\par 
+\textbf{Recursive Step :}We can think \textit{$T_1$} and \textit{$T_2$} as left and right subtrees such that 223-tree = \textit{$T_1$} . \textit{$T_2$} . Then the 223-tree has the number of vertices f(223-tree) = 1 + f(\textit{$T_1$}) + f(\textit{$T_2$}) . \\ \par 
+For g(223-tree) : \par 
+\textbf{Basis Step :} The min. number of vertices of the 223-tree which has only a root is \par  g(223-tree) = 1 .\par 
+\textbf{Recursive Step :}We can think \textit{$T_1$} and \textit{$T_2$} as left and right subtrees such that 223-tree = \textit{$T_1$} . \textit{$T_2$} . Then the 223-tree has the number of vertices g(223-tree) = 1 + g(\textit{$T_1$}) + g(\textit{$T_2$}) .
+\subsubsection*{3.2.c}
+\hspace{15px}To reach max. number of vertices , we need a full binary tree instead of a tree with other type and we know the formula from the lecture slides for number of the vertices f(T) = \textit{$2^{h(T)+1}$}\textit{$ - 1$} where h(T) is the height of the tree .\par 
+\textbf{Proof for f(223-tree) :} \par 
+\textbf{Basis Step :} The result is satisfied for a binary tree which has only a root ,i.e. f(223-tree) = 1 and h(223-tree) = 0 . 1 = \textit{$2^{0+1}$}\textit{$ - 1$} . \par 
+\textbf{Recursive Step :} We can think \textit{$T_1$} and \textit{$T_2$} as left and right subtrees of 223-tree . Assume f(\textit{$T_1$}) = \textit{$2^{h(\textit{$T_1$})+1}$}\textit{$ - 1$} and f(\textit{$T_2$}) = \textit{$2^{h(\textit{$T_2$})+1}$}\textit{$ - 1$} . And we already know the recursive formula of n(T) . We will use f(T) instead of n(T) since f(T) indicates the minimum number of vertices .\par 
+f(223-tree) = 1 + f(\textit{$T_1$}) + f(\textit{$T_2$}) \par 
+\hspace{55px} = 1 + (\textit{$2^{h(\textit{$T_1$})+1}$}\textit{$ - 1$}) + (\textit{$2^{h(\textit{$T_2$})+1}$}\textit{$ - 1$}) \par 
+\hspace{55px} = 2 . max(\textit{$2^{h(\textit{$T_1$})+1}$},\textit{$2^{h(\textit{$T_2$})+1}$}) \textit{$ - 1$} \par 
+\hspace{55px} = 2 . \textit{$2^{max(h(\textit{$T_1$}),h(\textit{$T_2$}))}$} \textit{$ - 1$} \par 
+\hspace{55px} = 2 . \textit{$2^{h(223-tree)}$} \textit{$ - 1$} \par 
+\hspace{55px} = \textit{$2^{h(223-tree)+1}$} \textit{$ - 1$} . \\ \par 
+
+\hspace{15px}To reach min. number of vertices , we need a tree with the property that for every vertex the absolute value of the
+difference of heights of its left subtree and right subtree is at most 2 instead of a full binary tree . Since full binary tree contains more vertices than the tree which has difference between left and right subtrees . \par 
+For a tree with h(223-tree) = 3 and difference between the height of the left and right subtrees is 2 , min number of vertices g(223-tree) = 5 . \par 
+For a tree with h(223-tree) = 4 and difference between the height of the left and right subtrees is 2 , min number of vertices g(223-tree) = 7 . \par 
+For a tree with h(223-tree) = 5 and difference between the height of the left and right subtrees is 2 , min number of vertices g(223-tree) = 9 . \par 
+By using these values ,we obtain the formula for the minimum number of vertices g(T) = 2.h(T) \textit{$- 1$} . \par 
+\textbf{Proof for g(223-tree) :} \par 
+\textbf{Basis Step :} The result is satisfied for a binary tree which has a right subtree with height 2 and left subtree with height 0 , g(223-tree) = 2 and h(223-tree) = 2 ,i.e. 2 = 2 . 2 \textit{$- 1$}.\par
+\textbf{Recursive Step :} We can think \textit{$T_1$} and \textit{$T_2$} as left and right subtrees of 223-tree . Assume  g(\textit{$T_1$}) = 2h(\textit{$T_1$}) \textit{$- 1$} and g(\textit{$T_2$}) = 2h(\textit{$T_2$}) \textit{$- 1$} . And we already know the recursive formula of n(T) . We will use g(T) instead of n(T) since g(T) indicates the minimum number of vertices .\par 
+g(223-tree) = 1 + g(\textit{$T_1$}) + g(\textit{$T_2$}) \par 
+\hspace{55px} =  1 + (2h(\textit{$T_1$}) \textit{$- 1$}) + (2h(\textit{$T_2$}) \textit{$- 1$}) \par 
+\hspace{55px} = max(2h(\textit{$T_1$}),2h(\textit{$T_2$})) \textit{$- 1$} \par 
+\hspace{55px} = 2.max(h(\textit{$T_1$}),h(\textit{$T_2$})) \textit{$- 1$} \par 
+\hspace{55px} = 2.h(223-tree) \textit{$- 1$} .
+\section*{Answer 4}
+\subsection*{4.1} 
+\hspace{15px} We know the formula for combination with repetition from the text book . The Theorem 2 in the text book says there are C(n + r \textit{$-$} 1 , r) r-combinations from a set with n elements when repetition of elements is allowed .
+\subsubsection*{4.1.a} 
+\hspace{15px} In this question ,we take n as the working number of the first loop which is n . And we take r as the number of nested loops . To find a , we use r = 2 and to find b ,we use r = 3 since they are at different layers . \par 
+a = 2 . C(n + 2 \textit{$-$} 1 , 2) = 2 . C(n + 1 , 2) = (n + 1) . n = \textit{$n^2$ + n} \par 
+We multiplied the combination by 2 since a is increasing 2 by 2 . \par
+b = C(n + 3 \textit{$-$} 1 , 3) = C(n + 2 , 3) = $\frac{(n+2).(n+1).n}{3!}$ = $\frac{\textit{$n^3+3n^2+2n$}}{6}$ \par 
+We did not do any multiplication for this combination since b is increasing 1 by 1 . 
+\subsubsection*{4.1.b}
+\hspace{15px} If a = b , we need solve an equation for the values that we found in part (a) . \\ \par 
+\textit{$n^2$ + n} = $\frac{\textit{$n^3+3n^2+2n$}}{6}$ \par 
+\textit{$6n^2+6n$} = \textit{$n^3+3n^2+2n$} \par 
+\textit{$n^3-3n^2-4n$} = 0 \par 
+By taking n parenthesis ; \par 
+\textit{n}(\textit{$n^2-3n-4$}) = 0 \par 
+\textit{$n(n-4)(n+1)$} = 0 \par 
+We have n = 0 , n = -1 and n = 4 but we know n $\geq$ 1 since n is the working number of the first loop which means we just use the value n = 4 . Therefore , n = 4 . 
+\subsection*{4.2} 
+\subsubsection*{4.2.a} 
+\hspace{15px} C(10,2) = $\frac{10!}{2!.8!}$ = 45 \\ \par 
+C(8,2) = $\frac{8!}{2!.6!}$ = 28 \\ \par 
+C(6,2) = $\frac{6!}{2!.4!}$ = 15 \\ \par 
+ 
+$10 \choose 2$ . $8 \choose 2$ . $6 \choose 2$  = 45 . 28 . 15  = 18900 ways to distribute 10 different fruits into 3 distinguishable plates, each plate has exactly 2 fruits .
+\subsubsection*{4.2.b}
+\hspace{15px} C(10,1) = $\frac{10!}{1!.9!}$ = 10 \\ \par 
+C(9,2) = $\frac{9!}{2!.7!}$ = 36 \\ \par 
+C(7,3) = $\frac{7!}{3!.4!}$ = 35 \\ \par 
+C(4,4) = $\frac{4!}{4!.0!}$ = 1 \\ \par 
+
+$10 \choose 1$ . $9 \choose 2$ . $7 \choose 3$ .$4 \choose 4$ = 10 . 36 . 35 . 1  = 12600 ways .
+\subsubsection*{4.2.c}
+\hspace{15px} If we use 1 plate , we can distribute fruits by using only $6 \choose 6$ = 1 way . \\ \par 
+For 2 plates , we can distribute fruits like 5-1 , 4-2 , 3-3 . Then , we have : \\ \par
+$6 \choose 5$ . $1 \choose 1$ = 6 \\ \par 
+$6 \choose 4$ . $2 \choose 2$ = 15 \\ \par 
+$6 \choose 3$ . $3 \choose 3$ = 20 \\ \par 
+So , there are 41 ways .\\ \par
+For 3 plates , we can distribute fruits like 4-1-1 , 3-2-1 , 2-2-2 . Then , we have : \\ \par 
+$6 \choose 4$ . $2 \choose 1$ . $1 \choose 1$ = 30 \\ \par 
+$6 \choose 3$ . $3 \choose 2$ . $1 \choose 1$ = 60 \\ \par 
+$6 \choose 2$ . $4 \choose 2$ . $2 \choose 2$ = 90 \\ \par 
+So ,there are 180 ways . \\ \par 
+For 4 plates , we can distribute fruits like 3-1-1-1 , 2-2-1-1 . Then , we have : \\ \par 
+$6 \choose 3$ . $3 \choose 1$ . $2 \choose 1$ . $1 \choose 1$ = 120 \\ \par 
+$6 \choose 2$ . $4 \choose 2$ . $2 \choose 1$ . $1 \choose 1$ = 180 \\ \par 
+So ,there are 300 ways . \\ \par 
+Therefore, there are 1 + 41 + 180 + 300 = 522 ways to distribute 6 different fruits into 4 indistinguishable plates .
+
+\subsubsection*{4.2.d} 
+\hspace{15px} We don't have to use all of the dragons . So , we can use formula for using no dragon , 1 dragon , 2 dragons , 3 dragons and so on . There are C(n + r - 1 , n - 1) ways to place r indistinguishable objects into n distinguishable boxes from the lecture slides . \\ \par 
+For 0 dragon fruit, r = 0 and n = 4 : \par 
+C(4 + 0 - 1 , 4 - 1) = 1 \par 
+For 1 dragon fruit , r = 1 and n = 4 : \par 
+C(4,3) = 4 \par 
+For 2 dragon fruits , r = 2 and n = 4 : \par 
+C(5,3) = 10 \par 
+For 3 dragon fruits , r = 3 and n = 4 : \par 
+C(6,3) = 20 \par 
+For 4 dragon fruits , r = 4 and n = 4 : \par 
+C(7,3) = 35 \par 
+For 5 dragon fruits , r = 5 and n = 4 : \par 
+C(8,3) = 56 \par 
+For 6 dragon fruits , r = 6 and n = 4 : \par 
+C(9,3) = 84 \par 
+Hence there are 1 + 4 + 10 + 20 + 35 + 56 + 84 = 210 ways .
+
+
+\end{document}
+
+​
+

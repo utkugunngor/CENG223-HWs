@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+
+
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+
+
+\begin{document}
+
+\section*{Student Information } 
+%Write your full name and id number between the colon and newline
+%Put one empty space character after colon and before newline
+Full Name : Utku Gungor \\
+Id Number : 2237477 \\
+
+% Write your answers below the section tags
+\section*{Answer 1}
+\subsection*{a} 
+\hspace{15px} The number of red candies must be 0 since we know that green ones are even and blue ones are odd . To reach 10 candies we must have odd numbers of red candies . Therefore, the required generating function that satisfies the given conditions is ; \par  (\textit{$x^0$}+\textit{$x^2$}+\textit{$x^4$}+...) . (\textit{$x^5$}+\textit{$x^7$}+\textit{$x^9$}+\textit{$x^{11}$}+...) . (\textit{$x^1$}+\textit{$x^3$}+\textit{$x^5$}+...) since we have infinite source. \par The paranthesis shows green, red and blue, respectively .To reach 10 candies , by multiplying the expressions of generating function , we see that the coefficient of \textit{$x^{10}$} is 6 . Hence , there are 6 ways to choose 10 candies that satisfies the required conditions.
+
+\subsection*{b}
+\hspace{15px} This question is pretty similar to the previous one . But generating function is little bit different. Since we have 5 of each types , the generating function is ; \par 
+(\textit{$x^0$}+\textit{$x^2$}+\textit{$x^4$}) . (\textit{$x^1$}+\textit{$x^3$}+\textit{$x^5$}) . \textit{$x^5$} \par 
+When we multiply them , \textit{$x^{10}$} has the coefficient 3 . Thus , there 3 ways to choose 10 candies for this question.
+\subsection*{c}
+\hspace{15px} By using partial fraction ,we have ; \par 
+F(x) = \textit{$7x^2$}($\dfrac{2}{5}$ . $\dfrac{1}{(1-2x)}$ + $\dfrac{3}{5}  $ . $\dfrac{1}{(1+3x)}$) \\ \par 
+\hspace{23px} = \textit{$7x^2$}($\dfrac{2}{5}$ . $\sum_{i\geq0}$ $\textit{$2^{i}$} . \textit{$x^{i}$}$ + $\dfrac{3}{5}$ . $\sum_{i\geq0}$ $\textit{$(-3)^{i}$} . \textit{$x^{i}$}$ ) \par 
+\hspace{23px} = \textit{$7x^2$}(1 - x + \textit{$7x^2$} - \textit{$13x^3$} + \textit{$55x^4$}  + ... ) \par 
+\hspace{23px} = \textit{$7x^2$} - \textit{$7x^3$} + \textit{$49x^4$} - \textit{$91x^5$} + \textit{$385x^6$} + ... \par 
+Hence , the sequence of the given generating function is ; \par 
+$\{0,0,7,-7,49,-91,385,...\}$
+ 
+
+\subsection*{d}
+\hspace{15px} Let's say \textit{$s_0$} = 1 and try this value on the recurrence relation . \par 
+\textit{$s_1$} = 8.\textit{$s_0$} + \textit{$10^0$} = 9 , so \textit{$s_0$} = 1 is a nice condition . Now we need a generating function for \textit{$s_1$},\textit{$s_2$},\textit{$s_3$}... . Choose F(x) = $\sum_{n=0}^{\infty}$ \textit{$s_n$}\textit{$x^n$} as a generating function . According to this function , we have the recurrence relation \textit{$s_n$}\textit{$x^n$} = 8\textit{$s_{n-1}$}\textit{$x^n$} + \textit{$10^{n-1}$}\textit{$x^n$} . \par 
+In order to start with n=1 to the function F , by changing the function simply , we obtain ; \par 
+F(x) \textit{$-$} 1 = $\sum_{n=1}^{\infty}$ \textit{$s_n$}\textit{$x^n$} = $\sum_{n=1}^{\infty}$ (8\textit{$s_{n-1}$}\textit{$x^n$} + \textit{$10^{n-1}$}\textit{$x^n$}) \par 
+\hspace{45px} = 8$\sum_{n=1}^{\infty}$ \textit{$s_{n-1}$}\textit{$x^n$} + $\sum_{n=1}^{\infty}$ \textit{$10^{n-1}$}\textit{$x^n$} \par 
+\hspace{45px} = 8x$\sum_{n=0}^{\infty}$ \textit{$s_n$}\textit{$x^n$} + x$\sum_{n=0}^{\infty}$\textit{$10^n$}\textit{$x^n$} \par 
+\hspace{45px} = 8xF(x) + x / (1 \textit{$-$} 10x) \par 
+When we solve it for F(x) , we have F(x) = $\dfrac{1-9x}{(1-8x)(1-10x)}$ , from partial fraction ; \par 
+\hspace{45px} F(x) = $\dfrac{1}{2}$ ($\dfrac{1}{1-8x}$ + $\dfrac{1}{1-10x}$) which is equal to ; \par 
+\hspace{45px} F(x) = $\sum_{n=0}^{\infty}$ $\dfrac{1}{2}$ (\textit{$8^n$} + \textit{$10^n$}) \textit{$x^n$} . \par 
+\hspace{45px} Hence , \textit{$s_n$} = $\dfrac{1}{2}$ (\textit{$8^n$} + \textit{$10^n$}) .
+\section*{Answer 2}
+\subsection*{a}
+\hspace{15px} We can verify the given expression by using an example. Consider m=2 , k=4 and n=20 . We obviously know that 2 $|$ 4 . Now , we have \textit{$A_2$} = (2,4,6,8,10,12,14,16,18,20] and \textit{$A_4$} = (4,8,12,16,20] since \textit{$A_m$} is the set of numbers in the interval
+(m..n] that are divisible by m . According to the question , we need to see if \textit{$A_4$} $\subseteq$ \textit{$A_2$} or not . We see the numbers in \textit{$A_4$} are 8,12,16,20  and we can clearly say that these numbers are included in \textit{$A_2$} which means \textit{$A_4$} $\subseteq$ \textit{$A_2$} . This expression is always true for some m and k if m $|$ k  . Hence , we conclude that if m $|$ k , then \textit{$A_k$} $\subseteq$ \textit{$A_m$} .
+\subsection*{b}
+\hspace{15px} \textit{$C_n$} = $\cup^{n-1}_{i=2}$ \textit{$A_i$} = \textit{$A_2$} $\cup$ \textit{$A_3$} $\cup$ \textit{$A_4$} $\cup$ ... $\cup$ \textit{$A_{44}$} and we have ;\par 
+$\cup_{primes p \leq \sqrt{n}}$ \textit{$A_p$} = \textit{$A_2$} $\cup$ \textit{$A_3$} $\cup$ \textit{$A_5$} for n = 45 .\par 
+According to the Theorem 2 of text book : If n is a composite integer ,  then n has a prime divisor less than or equal to $\sqrt{n}$ . \par 
+When we consider this theorem , we should look 2 , 3 and 5 for n =45 since they are only primes less than or equal to $\sqrt{45}$. So we can say that (\textit{$A_2$} $\cup$ \textit{$A_3$} $\cup$ \textit{$A_5$}) includes (\textit{$A_2$} $\cup$ \textit{$A_3$} $\cup$ \textit{$A_4$} $\cup$ ... $\cup$ \textit{$A_{44}$}) and (\textit{$A_2$} $\cup$ \textit{$A_3$} $\cup$ \textit{$A_4$} $\cup$ ... $\cup$ \textit{$A_{44}$}) includes (\textit{$A_2$} $\cup$ \textit{$A_3$} $\cup$ \textit{$A_5$}) . \par 
+Therefore , given two equations are equal .
+
+\subsection*{c}
+\hspace{15px} We have the set of numbers such that ; \par 
+\textit{$A_m$} = (m,2m,3m,4m,5m....n] \par 
+Since the first member is not included in \textit{$A_m$} ,the sum of members of \textit{$A_m$} is;  \par $|$ \textit{$A_m$} $|$ = $\dfrac{n-2m}{m}$ + 1 = $\dfrac{n}{m} - 1$ but if n/m is not an integer , we take the max. number that is less than the division n/m . Hence we have ; \par 
+$|$ \textit{$A_m$} $|$ = $\lfloor$ n/m  $\rfloor$ \textit{$-$} 1 . We have reached the required equation . Hence , the given equation is true for m $\geq$ 2 .
+\subsection*{d}
+\hspace{15px} For any relatively primes a,b $\leq$ n , to find the one number we can use some examples . Let's say a = 4 , b = 9 and n = 80 at first . Now we have ; \par 
+\textit{$A_4$} $\cap$ \textit{$A_9$} = $\{36,72\}$  \par 
+\textit{$A_{36}$} = $\{72\}$  (since first member is not included because of the open parenthesis) \par 
+So , the difference is 36 which is ab here . \par 
+Let's say a = 9 , b = 10 and n = 300 as another example . Now we have ; \par 
+\textit{$A_9$} $\cap$ \textit{$A_{10}$} = $\{90,180,270\}$  \par 
+\textit{$A_{90}$} = $\{180,270\}$  (since first member is not included because of the open parenthesis again) \par 
+So , the difference is 90 which is ab here again . \par 
+Therefore , the one number in  (\textit{$A_a$} $\cap$ \textit{$A_b$}) \textit{$-$} \textit{$A_{ab}$} is ab .
+  
+\subsection*{e}
+\hspace{15px} $\cap_{p\in P}$ \textit{$A_p$} is the set of numbers that are divisible by least common multiple of primes up to n . Hence , the simple formula is the following : \par 
+$|$ $\cap_{p\in P}$ \textit{$A_p$} $|$ = $\lfloor$ $\dfrac{n}{\textit{$p_1*p_2*p_3...p_k$ }}$ $\rfloor$
+\subsection*{f}
+\hspace{15px} By using the Inclusion-Exclusion principle we know $|$ \textit{$C_{45}$} $|$ = $|$\textit{$A_2$} $\cup$ \textit{$A_3$} $\cup$ \textit{$A_5$}$|$ , for n = 45 , we obtain ; \par 
+$|$ \textit{$C_{45}$} $|$ = $|$\textit{$A_2$}$|$ + $|$\textit{$A_3$}$|$ + $|$\textit{$A_5$}$|$ \textit{$-$} $|$\textit{$A_2$} $\cap$ \textit{$A_3$}$|$ \textit{$-$} $|$\textit{$A_2$} $\cap$ \textit{$A_5$}$|$ \textit{$-$} $|$\textit{$A_3$} $\cap$ \textit{$A_5$}$|$ + $|$\textit{$A_2$} $\cap$ \textit{$A_3$} $\cap$ \textit{$A_5$}$|$ .
+
+\subsection*{g}
+\hspace{15px} To find the number of primes up to 45 , we need \textit{$A_2$} , \textit{$A_3$} , \textit{$A_5$} and their intersections .  Now, we have ; \par 
+$|$\textit{$A_2$}$|$ = 21 \par 
+$|$\textit{$A_3$}$|$ = 14 \par 
+$|$\textit{$A_5$}$|$ = 8 \par 
+$|$\textit{$A_2$} $\cap$ \textit{$A_3$}$|$ = 7 \par 
+$|$\textit{$A_2$} $\cap$ \textit{$A_5$}$|$ = 4 \par 
+$|$\textit{$A_3$} $\cap$ \textit{$A_5$}$|$ = 3 \par 
+$|$\textit{$A_2$} $\cap$ \textit{$A_3$} $\cap$ \textit{$A_5$}$|$ = 1  , hence we reach ;\par 
+$|$ \textit{$C_{45}$} $|$ = $|$\textit{$A_2$}$|$ + $|$\textit{$A_3$}$|$ + $|$\textit{$A_5$}$|$ \textit{$-$} $|$\textit{$A_2$} $\cap$ \textit{$A_3$}$|$ \textit{$-$} $|$\textit{$A_2$} $\cap$ \textit{$A_5$}$|$ \textit{$-$} $|$\textit{$A_3$} $\cap$ \textit{$A_5$}$|$ + $|$\textit{$A_2$} $\cap$ \textit{$A_3$} $\cap$ \textit{$A_5$}$|$  = 21 + 14 + 8 \textit{$-$} 7 \textit{$-$} 4 \textit{$-$} 3 + 1 = 30 . This the number of composite numbers up to 45 except 1 . Hence , the number of primes up to 45 is 44 \textit{$-$} 30 = 14 .
+\section*{Answer 3}
+\subsection*{a}
+\hspace{15px} We have to show if (a,b) $\ll$ (c,d) and (c,d) $\ll$ (e,f), then (a,b) $\ll$ (e,f) . By using given conditions ; \par 
+((a$<$c) $\vee$((a=c) $\wedge$ (b$\leq$d))) $\wedge$ ((c$<$e) $\vee$((c=e) $\wedge$ (d$\leq$f))) $\rightarrow$ ((a$<$e) $\vee$((a=e) $\wedge$ (b$\leq$f))) which is actually the condition that we are trying to prove . Let's examine conditions in detail . \par 
+If (a$<$c) $\wedge$ (c$<$e) , then (a$<$e) is clearly true . \par 
+If ((a=c) $\wedge$ (b$\leq$d)) $\wedge$ (c$<$e) , then (a$<$e) is clearly true again . \par 
+If (a$<$c) $\wedge$ ((c=e) $\wedge$ (d$\leq$f)) , then (a$<$e) is clearly true again . \par 
+If ((a=c) $\wedge$ (b$\leq$d)) $\wedge$ ((c=e) $\wedge$ (d$\leq$f)) , then ((a=e) $\wedge$ (b$\leq$f)) will clearly be true . \par 
+As we have showed , $\ll$ is transitive relation .
+\subsection*{b}
+We need to check if $\propto$ is reflexive , symmetric and transitive . If it has all those features , then it is called equivalence relation . \par 
+Firstly , if it is symmetric , f $\propto$ g $\rightarrow$ g $\propto$ f . \par 
+f(x) = g(x) $\rightarrow$ g(x) = f(x) for x $\geq$ k . Thus , the relation $\propto$ is symmetric . \par 
+We know transitivity from part(a) . We need to show if f $\propto$ g and g $\propto$ h ,then f $\propto$ h . We can easily say if f(x) = g(x) and g(x) = h(x) , then f(x) = h(x) for x $\geq$ k . Hence , the relation is transitive .\par 
+If it is reflexive , it must satisfy f $\propto$ f which means f(x) = f(x) for every x $\geq$ k . It is clearly true . So , the relation is reflexive . \par 
+Therefore , $\propto$ is an equivalence relation .
+
+
+
+\end{document}
+
+​
+

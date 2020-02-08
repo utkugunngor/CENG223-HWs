@@ -1,0 +1,203 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[dvips]{graphicx}
+\usepackage{fancybox}
+\usepackage{verbatim}
+\usepackage{array}
+\usepackage{latexsym}
+\usepackage{alltt}
+\usepackage{hyperref}
+\usepackage{textcomp}
+\usepackage{color} 
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{tikz}
+\usepackage{float}
+\usepackage[hmargin=3cm,vmargin=5.0cm]{geometry}
+\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+
+\begin{document}
+
+\section*{Student Information } 
+%Write your full name and id number between the colon and newline
+%Put one empty space character after colon and before newline
+Full Name : Utku Gungor \\
+Id Number : 2237477 \\
+
+% Write your answers below the section tags
+\section*{Answer 1}
+\subsection*{a} 
+\hspace{15px} I couldn't draw the graph due to some technical problems.But I can respond questions which don't require drawing.       
+\subsection*{b}
+\hspace{14px} \textbf{Reflexivity:} If abc $\in$ S , abc is a substring of abc ,which means \textit{$w_1$} is a substring of \textit{$w_2$} .\par 
+\textbf{Transivity:} If \textit{$w_1$} is a substring of \textit{$w_2$} and \textit{$w_2$} is a substring of \textit{$w_3$} , then \textit{$w_1$} is obviously a substring of \textit{$w_3$} .   \par 
+\textbf{Antisymmetry:} If \textit{$w_1$} is a substring of \textit{$w_2$} and \textit{$w_2$} is a substring of \textit{$w_1$} , then \textit{$w_1$} = \textit{$w_2$} . \par 
+Hence , as three conditions are satisfied , we conclude that (S,R) is a poset .
+\subsection*{c}
+\hspace{15px} No , every two elements of S must be comparable in order to be total order . But in this question , for the elements '01' and '10' , the condition is not satisfied since they are not comparable . Therefore, it is not total order .
+\subsection*{d}
+\subsection*{e}
+
+\section*{Answer 2}
+\subsection*{a}
+	\bigskip
+	\begin{tabular}{|c|c|} \hline
+	\textit{vertex} & \textit{adjaceny list} \\ \hline
+	\textit{a} & \textit{a,b,d} \\
+	\textit{b} & \textit{c,d} \\
+	\textit{c} & \textit{b} \\
+	\textit{d} & \textit{c} \\
+	\textit{e} & \textit{b,f} \\
+	\textit{f} & \textit{b,e,f} \\
+	\textit{g} & \textit{f,c} \\ \hline
+	\end{tabular}
+	
+\subsection*{b}
+\bigskip
+$\begin{bmatrix}
+
+
+1 & 1 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 1 & 0 \\
+0 & 1 & 0 & 0 & 1 & 1 & 0 \\
+0 & 0 & 1 & 0 & 0 & 1 & 0 \\
+
+\end{bmatrix}$
+\subsection*{c}
+\hspace{15px} \textbf{indegrees:}  \par 
+\textit{$deg^{-}(a)$} = 1 , 
+\textit{$deg^{-}(b)$} = 4 ,
+\textit{$deg^{-}(c)$} = 3 ,
+\textit{$deg^{-}(d)$} = 2 ,
+\textit{$deg^{-}(e)$} = 1 ,
+\textit{$deg^{-}(f)$} = 3 ,
+\textit{$deg^{-}(g)$} = 0 .
+\par 
+\textbf{outdegrees:} \par 
+\textit{$deg^{+}(a)$} = 3 ,
+\textit{$deg^{+}(b)$} = 2 ,
+\textit{$deg^{+}(c)$} = 1 ,
+\textit{$deg^{+}(d)$} = 1 ,
+\textit{$deg^{+}(e)$} = 2 ,
+\textit{$deg^{+}(f)$} = 3 ,
+\textit{$deg^{+}(g)$} = 2 .
+\subsection*{d}
+\hspace{15px} 6 of paths of length 4 : \par 
+\textbf{1.} g , f , e , b , c \par 
+\textbf{2.} g , f , e , b , d \par 
+\textbf{3.} f , e , b , c , d \par 
+\textbf{4.} f , e , b , d , c \par 
+\textbf{5.} e , f , b , c , d \par 
+\textbf{6.} e , f , b , d , c \par 
+\subsection*{e}
+\hspace{15px} There are 3 simple circuits in G . \par
+\textbf{1.} b , d , c , b \par
+\textbf{2.} d , c , b , d \par 
+\textbf{3.} c , b , d , c \par 
+\subsection*{f}
+\hspace{15px} Let's consider  the path a , d , c . \par There is obviously a path from a to c ; however , there is no path from c to a . Therefore , G is weakly-connected .
+
+\subsection*{g}
+\hspace{15px} There are 4 strongly-connected components of G which are b - c , b - d , c - d and e - f .
+\subsection*{h}
+\hspace{15px} There exist 6 different paths of length 3 between every distinct pairs of vertices in the subgraph H of G
+induced by the vertices {a, b, c, d} $\subset$ V which are ; \par 
+\textbf{1.} b , d , c , b \par 
+\textbf{2.} a , d , c , b \par 
+\textbf{3.} a , b , d , c \par 
+\textbf{4.} a , b , c , b \par 
+\textbf{5.} d , c , b , d \par 
+\textbf{6.} c , b , d , c
+
+\section*{Answer 3}
+\subsection*{a}
+\hspace{15px} The initial and the final vertex of an Euler path has odd degree , but every other vertex has even degree at the same time . Since every vertex of G has even degree (loops are not included) , there is no Euler path in G . 
+\subsection*{b}
+\hspace{12px} There is an Euler circuit from h to h : \par 
+h , h , e , b , a , e , f , b , b , f , e , i , f , c , d , g , j , d , g , k , j , j , c , i , h . 
+\subsection*{c}
+\hspace{12px} There is a Hamiltonian path in G : \par 
+j , k , g , d , c , i , h , e , a , b , f .  
+\subsection*{d}
+\hspace{15px} We have two sides in this question ,left and right . To find a Hamilton circuit , we need to pass from every vertex only once , and come to the initial vertex . To pass from every vertex , we need to go to left from right or right from left . So , it is certain that we use the vertex c while doing this . \par 
+If we begin from left side , we use vertex c while passing to the right side . And after passing from every vertex on the right side , we need to go back , which means we will use c one more time although it is not the initial vertex. It is also valid for the right side . This is a contradiction. \par 
+Let's think c as the initial vertex . We can finish right or left side at first . But after doing this , we need pass to the other side by using c . And after that side is finished , we will go back to the initial vertex , c . But , we had to use the vertex c in the middle ,which is a contradiction again . \par 
+Hence , there is no Hamilton circuit in this graph .
+
+\section*{Answer 4}
+\subsection*{a}
+\hspace{12px} The number of vertices of \textit{$K_{m,n}$} is m+n. And the number of edges is m.n since \textit{$K_{m,n}$} is a complete bipartite graph which means there is an edge from every vertex in \textit{$V_1$} to every vertex in \textit{$V_2$} . (\textit{$V_1$} and \textit{$V_2$} are two subsets .)
+\subsection*{b}
+\hspace{12px} Every circuit in a bipartite graph must change between vertices from two subsets , let's say \textit{$V_1$}(has m vertices) and \textit{$V_2$}(has n vertices) . Since a Hamilton circuit uses all vertices in \textit{$V_1$} and \textit{$V_2$} , there must be an equation that m = n . 
+
+\section*{Answer 5}
+\subsection*{a}
+\hspace{15px} According to Dijkstra's Algorithm , we need to fing closest vertices step by step . \par 
+The closest vertex to s is w with length 3 , second one is u with length 4 and the third one is v with length 5 . After choosing one of them , we have several ways to choose now . To reach the shortest path , we compare the possibilities . After the vertex v , we should choose x since if we would choose v or u , we would get longer paths . Now we have the path s-v-x . To arrive the vertex t , we have 4 ways which go forward. Let's find and compare them; \par 
+1.  x-y-t with length 10; \par 
+2.  x-z-t with length 9; \par
+3.  x-y-z-t with length 8; \par
+4.  x-z-y-t with length 19; \par 
+The shortest one is third one which is x-y-z-t with length 8 , obviously . \par 
+So by Dijkstra's Algorithm , we shortest path from s to t is s-v-x-y-z-t with length 15 .
+
+\subsection*{b}
+\hspace{15px} Let s be the first node. \par 
+\bigskip
+	\begin{tabular}{|c|c|c|} \hline
+	\textit{choice} & \textit{edge} & \textit{weight} \\ \hline
+	\textit{1} & \textit{s-w} & \textit{3} \\
+	\textit{2} & \textit{w-u} & \textit{1} \\
+	\textit{3} & \textit{w-v} & \textit{3} \\
+	\textit{4} & \textit{v-x} &\textit{2} \\
+	\textit{5} & \textit{x-y}&\textit{1} \\
+	\textit{6} & \textit{y-z}& \textit{4}\\
+	\textit{7} & \textit{z-t} & \textit{3} \\ \hline
+	\end{tabular} 
+	\bigskip
+	\par 
+	According to the table , we can conclude that the total weight is 17 by Prim's Algorithm .
+\subsection*{c}
+\subsection*{d}
+\hspace{15px} Yes , I can iteratively find a shortest path from s to t by using some comparisons and inspections .There are different ways from Dijsktra's Algorithm to find it . Hence we can update the shortest path from s to t without calling Dijsktra's Algorithm.
+\section*{Answer 6}
+\subsection*{a}
+\hspace{12px} Number of vertices : 13 . \par 
+Number of edges : 12 \par 
+Height of the tree : 4 .
+\subsection*{b}
+\hspace{12px} \textbf{Postorder} traversal of T : \par w - s - m - t - q - x - n - y - u - z - v - r - p .
+\subsection*{c}
+\hspace{12px} \textbf{Inorder} traversal of T : \par s - w - q - m - t - p - x - u - n - y - r - v - z .
+\subsection*{d} 
+\hspace{12px} \textbf{Preorder} traversal of T : \par p - q - s - w - t - m - r - u - x - y - n - v - z .
+\subsection*{e}
+\hspace{12px} It is not a full binary tree since a binary tree is full if every node has 0 or 2 children . But in tree T , s and t has only 1 children , for instance . There are some more nodes which do not have 0 or 2 children . Hence , T is not a full binary tree . 
+\subsection*{f}
+\hspace{12px} The node n is on the right side of the u . So if the tree is binary search tree , the value of n must be greater than the value of u . Here n has the value 61, u has the value 63 and 61 is not greater than 63 . Hence , T is not a binary search tree .
+\subsection*{g}
+\hspace{12px} When height h = 0 ,number of vertices is exactly 1 = 3.0 + 1 . \par 
+For h = 1 , number of vertices is exactly 4 = 3.1 + 1 . \par 
+For h = 2 , number of minimum vertices is 7 = 3.2 + 1 . \par 
+For h = 3 , number of minimum vertices is 10 = 3.3 + 1 . \par 
+Hence , we can conclude that the number of minimum vertices of a full ternary tree is n = 3h + 1 .
+\subsection*{h}
+\subsection*{i}
+\subsection*{j}
+\subsection*{k}
+\subsection*{l}
+
+\end{document}
+
+​
+

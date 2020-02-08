@@ -1,0 +1,164 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+
+
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+%misc libraries goes here
+%\usepackage{fitch}
+
+
+\begin{document}
+
+\section*{Student Information } 
+%Write your full name and id number between the colon and newline
+%Put one empty space character after colon and before newline
+Full Name : Utku Gungor \\
+Id Number : 2237477 \\
+
+% Write your answers below the section tags
+\section*{Answer 1}
+
+\subsection*{1.a}
+\hspace{20px}For all possible values of p,q and r; this compound proposition is true as shown in the Table 1. Therefore, given proposition is tautology.
+\begin{table}[H]
+	\centering
+	\caption{} 
+	\bigskip
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|} \hline
+	\textit{p} & \textit{q} & \textit{r} & $\neg{r}$ & $\textit{p} \rightarrow{q} $ & $\textit{p} \wedge \neg{r} $ & $\textit{(p} \rightarrow{q)} \leftrightarrow \textit{(p} \wedge \neg{r)} $ & $\neg{(q} \wedge{r)} $ &  $\textit{((p} \rightarrow{q)} \leftrightarrow{(p} \wedge \neg{r))} \rightarrow \neg{(q} \wedge{r)} $ \\ \hline
+	\textit{T} & \textit{T} & \textit{T} & \textit{F} & \textit{T} & \textit{F} & \textit{F} & \textit{F} & \textit{T} \\ \hline
+	\textit{T} & \textit{T} & \textit{F} & \textit{T} & \textit{T} & \textit{T} & \textit{T} & \textit{T} & \textit{T}\\ \hline
+	\textit{T} & \textit{F} & \textit{T} & \textit{F} & \textit{F} & \textit{F} & \textit{T} &\textit{T} & \textit{T}\\ \hline
+	\textit{F} & \textit{T} & \textit{T} & \textit{F} & \textit{T} & \textit{F} & \textit{F} &\textit{F} & \textit{T}\\ \hline
+	\textit{T} & \textit{F} & \textit{F} & \textit{T} & \textit{F} & \textit{T} & \textit{F} &\textit{T} & \textit{T}\\ \hline
+	\textit{F} & \textit{T} & \textit{F} & \textit{T} & \textit{T} & \textit{F} & \textit{F} &\textit{T} & \textit{T}\\ \hline
+	\textit{F} & \textit{F} & \textit{T} & \textit{F} & \textit{T} & \textit{F} & \textit{F} &\textit{T} & \textit{T}\\ \hline
+	\textit{F} & \textit{F} & \textit{F} & \textit{T} & \textit{T} & \textit{F} & \textit{F} &\textit{T} & \textit{T}\\ \hline
+	
+	\end{tabular}
+	\end{table}
+
+\subsection*{1.b}
+\hspace{20px}For all possible values of p and q; this compound proposition is false according to the Table 2. Therefore, given proposition is contradiction.
+\begin{table}[H]
+	\centering
+	\caption{} 
+	\bigskip
+	\begin{tabular}{|c|c|c|c|c|c|c|} \hline
+	\textit{p} & \textit{q} & $\textit{p}  \vee{q} $ & $\textit{p} \rightarrow{q} $& $\textit{q} \rightarrow{\neg{p}}$ &$\textit{(p} \vee{q)} \wedge{(p} \rightarrow{q)} \vee{(q} \rightarrow \neg{p)} $ &$\neg{((p} \vee{q)} \wedge{(p} \rightarrow{q)} \vee{(q} \rightarrow \neg{p))} $ \\ \hline
+	\textit{T} & \textit{T} & \textit{T} & \textit{T}& \textit{F}&\textit{T}& \textit{F} \\ \hline
+	\textit{T} & \textit{F} &\textit{T} &\textit{F} &\textit{T} &\textit{T}& \textit{F} \\ \hline
+	\textit{F} & \textit{T} & \textit{T}&\textit{T} &\textit{T} &\textit{T}& \textit{F} \\ \hline
+	\textit{F} & \textit{F} & \textit{F}&\textit{T} & \textit{T}&\textit{T}& \textit{F} \\ \hline
+	
+	
+	\end{tabular}
+	\end{table}
+\subsection*{For Question 2:}\hspace{20px}We can explain these questions by using counterexamples.Let's say P(x) is 'x is a CS student' and Q(x) is 'x plays basketball'. Assume that we have 4 people: Jeff,Felix,Morgan and Laura. 
+\subsection*{2.a}\hspace{20px}If Jeff and Morgan are CS students, and Felix and Laura play basketball, the left hand-side of the argument is satisfied . But the right hand-side which means there are some x that is CS student and plays basketball is not satisfied . Therefore, this predicate logic argument is invalid.
+\subsection*{2.b}\hspace{20px}According to the left hand-side of the argument , these 4 people are CS students . If it is true , the right hand-side which means there are some people that are CS students is also true . Therefore, this predicate logic argument is valid. 
+\section*{Answer 2}
+
+\hspace{20px}Let's show the equivalence step by step:
+\bigskip
+\begin{table}[H]
+	\centering
+	\caption{} 
+	\bigskip
+	\begin{tabular}{|c|c|c|c|c|} \hline
+	\textit{Step} & \textit{Proposition1} & \textit{Step Reference} & \textit{Proposition2} & \textit{Step Reference} \\ \hline
+	\textit{1} & $\textit{(} \neg{p} \vee \textit{p)} \rightarrow \textit{((p} \wedge \neg{q)} \rightarrow{r)} $ & \textit{Given Form} & $ \textit{(q} \vee \textit{r)} \vee \neg{p} $ & \textit{Given Form} \\ \hline
+	\textit{2} & $\textit{(p} \wedge \neg{q)} \rightarrow{r} $ & \textit{Negation Laws} & $\neg{p} \vee \textit{(q} \vee \textit{r)}  $ & \textit{Commutative Laws} \\ \hline
+	\textit{3} & $\neg{(p} \rightarrow{q)} \rightarrow{r} $ & \textit{table7,equation5} & $(\neg{p} \vee \textit{q)} \vee{r} $ & \textit{Associative laws} \\ \hline
+	\textit{4} & $\textit{(p} \rightarrow{q)} \vee{r} $ & \textit{table7,equation3} & $\textit{(p} \rightarrow{q)} \vee{r} $ & \textit{table7,equation1} \\ \hline 
+	\end{tabular}
+	\end{table}
+
+\bigskip While passing from Step1 to Step2 , we ignored the left hand-side of the Proposition1 which is true, so the result completely depends on the right hand-side because of the implication rules. This is the reason of ignorance. Therefore, as shown in the Table3, the last forms of propositions are same and these propositions are logically equivalent.
+ 
+\section*{Answer 3}
+$\textbf{1.} \hspace{15px} \forall x (W(x) \rightarrow{Has \textunderscore CS \textunderscore degree(x)}) $ \bigskip \\ 
+$\textbf{2.} \hspace{15px} \forall x \forall y (((Phd(x) \wedge W(x))\wedge(Phd(y) \wedge W(y))) \rightarrow Knows(x,y)) $ \bigskip \\
+$\textbf{3.} \hspace{15px} \textit{W(Cenk)} \wedge \forall y (W(y) \wedge (y \neq Cenk) \rightarrow Older(Cenk,y)) $ \bigskip \\
+$\textbf{4.} \hspace{15px} \forall x (W(x) \wedge (x \neq Selen) \rightarrow Phd(x)) $ \bigskip \\
+$\textbf{5.} \hspace{15px} \neg \forall x(W(x) \rightarrow \forall y (W(y) \rightarrow Knows(x,y))) $ \bigskip \\
+$\textbf{6.} \hspace{15px} \neg \exists x \exists y \exists z (Phd(x) \wedge Phd(y) \wedge Phd(z) \wedge (x\neq y) \wedge (y\neq z) \wedge (x\neq z)) $ \bigskip \\
+$\textbf{7.} \hspace{15px} \exists x \exists y \exists z (Older(x,Gizem) \wedge Older(y,Gizem) \wedge Older(z,Gizem) \wedge (x\neq y) \wedge (y\neq z) \wedge (x\neq z))$ \bigskip \\
+$\textbf{8.} \hspace{15px} \exists x (Phd(x) \wedge W(x)) \wedge \neg \exists x \exists y ((Phd(x) \wedge W(x)) \wedge (Phd(y) \wedge W(y)) \wedge (x\neq y) ) $ \bigskip \\
+\section*{Answer 4}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{*6{l}}
+	$1$ & & $\textit{(p} \rightarrow{r)} \vee \textit{(q} \rightarrow{r)} $ & $\textit{premise} $ \\ \hline \hline 
+	$2$ & & $\textit{p} \wedge \textit{q} $ & $\textit{Assumption} $ \\ \hline   \multicolumn{0}{|c}{3}  
+	$$& & $\textit{p} \rightarrow{r} $ & $\textit{Assumption} $&\multicolumn{1}{c|}{} \\ \multicolumn{0}{|r}{4} 
+	$$ & & $\textit{p} $ & $\wedge e,2 $&\multicolumn{1}{c|}{}  \\ \multicolumn{0}{|r}{5}
+	$$ & & $\textit{r} $ & $\rightarrow e,3,4 $ &\multicolumn{1}{c|}{}\\  \hline \hline \multicolumn{0}{|r}{6}
+	$$ & & $\textit{q} \rightarrow{r} $ & $\textit{Assumption} $&\multicolumn{1}{c|}{} \\\multicolumn{0}{|r}{7}
+	$$ & & $\textit{q} $ & $\wedge e,2 $ &\multicolumn{1}{c|}{}\\ \multicolumn{0}{|r}{8}
+	$$ & & $\textit{r} $ & $\rightarrow e,6,7 $&\multicolumn{1}{c|}{} \\  \hline 
+	$9$ & & $\textit{r} $ & $\vee e,1,3-5,6-8 $ \\ \hline \hline
+	$10$ & & $\textit{(p} \wedge \textit{q)} \rightarrow{r} $ & $\rightarrow i,2-9 $ \\
+	
+		
+	\end{tabular}
+	\end{table}
+\section*{Answer 5}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{*6{l}}
+	$1$ & & $\neg {p} \vee \neg {q}  $ & $\textit{premise} $ \\ \hline \hline \hline
+	$2$ & & $\textit{p} \wedge \textit{q} $ & $\textit{Assumption} $ \\ 
+	$3$ & & $\textit{p} $ & $\wedge e,2 $\\ 
+	$4$ & & $\textit{q} $ & $\wedge e,2 $ \\ \hline  \hline
+	$5$ & & $\neg{r} $ & $\textit{Assumption} $ \\ \hline \multicolumn{0}{|r}{6}
+	$$ & & $\neg{p}$ & $ \textit{Assumption} $ &\multicolumn{1}{c|}{}\\ \multicolumn{0}{|r}{7}
+	$$ & & $\bot $ & $\neg{e,3,6}$ &\multicolumn{1}{c|}{}\\ \hline \hline \multicolumn{0}{|r}{8}
+	$$ & & $\neg{q} $ & $\textit{Assumption} $&\multicolumn{1}{c|}{} \\  \multicolumn{0}{|r}{9}
+	$$ & & $\bot $ & $\neg{e,4,8} $ &\multicolumn{1}{c|}{}\\  \hline 
+	$10$ & & $\bot $ & $\vee e,1,6-7,8-9$ \\ \hline \hline
+	$11$ & & $\neg \neg{r} $ & $\neg i,5,10 $ \\ 
+	$12$ & & $\textit{r} $ & $\neg \neg e,11$ \\   \hline \hline \hline
+	$13$ & & $\textit{(p} \wedge \textit{q)} \rightarrow{r} $ & $\rightarrow i,2-12 $ \\ 
+	
+		
+	\end{tabular}
+	\end{table}
+\section*{Answer 6}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{*6{l}}
+	$1$ & & $\forall x (P(x) \rightarrow (Q(x) \rightarrow R(x)))$ & \textit{premise} \\
+	$2$ & & $\exists x (P(x)) $ & \textit{premise} \\ 
+	$3$ & & $\forall x (\neg R(x)) $ & \textit{premise} \\ \hline \hline
+	$4$ & c & $\textit{P(c)} $ &   \textit{Assumption} \\
+	$5$ & & $\textit{P(c)} \rightarrow (Q(c) \rightarrow R(c)) $ & $\forall e,1  $ \\
+	$6$ & & $\textit{Q(c)} \rightarrow (R(c)) $ & $\rightarrow e,4,5 $ \\
+	$7$ & & $\neg R(c) $ & $\forall e,3 $ \\ \hline  \multicolumn{0}{|r}{8}
+	$$ & & $\textit{Q(c)} $ & $\textit{Assumption} $ &\multicolumn{1}{c|}{}\\ \multicolumn{0}{|r}{9}
+	$$ & & $\textit{R(c)} $ & $\rightarrow e,6,8 $&\multicolumn{1}{c|}{} \\  \multicolumn{0}{|r}{10}
+	$$& & $\bot $ & $\neg e,7,9 $ &\multicolumn{1}{c|}{}\\ \hline
+	$11$& & $\neg Q(c) $ & $\neg i,8-10 $ \\ 	
+	$12$& & $\exists x (\neg Q(x)) $ & $\exists i,11 $ \\ \hline \hline
+	$13$ & & $\exists x (\neg Q(x)) $ & $\exists e,4-12 $ \\
+	
+	\end{tabular}
+	\end{table}
+
+\end{document}
+
+​
+
